@@ -1,0 +1,1196 @@
+/*--- TEST   ---*/
+
+	.test_btn{
+		width: 64px;
+		height: 64px;
+		border-radius: 32px;
+		position: fixed;
+		bottom: 50%;
+		right: 128px;
+		background: yellow;
+	}
+
+	.center {
+	    position: absolute;
+	}​
+
+/*---   STYLE   ---*/
+
+	html{
+		overflow-y: hidden;
+		background-color: black;
+	}
+
+	.main_heading{
+		width: 100%;
+		text-align: center;
+	}
+
+	@media only screen {
+
+		h1.title{
+			color: white;
+			font-size: 3em;
+			font-weight: 200%;
+			
+		}
+
+		h2.subtitle{
+			color: white;
+			font-size: 2em;
+		}
+
+	}
+
+	@media only screen and (min-width: 40.063em) {
+
+		h1.title{
+			color: white;
+			font-size: 8em;
+			font-weight: 200%;
+			
+		}
+
+		h2.subtitle{
+			color: white;
+			font-size: 4em;
+		}
+
+	}
+
+	@media only screen and (min-width: 64.063em) {
+
+		h1.title{
+			color: white;
+			font-size: 10em;
+			font-weight: 200%;
+			
+		}
+
+		h2.subtitle{
+			color: white;
+			font-size: 5em;
+		}
+
+	}
+
+	.hidden{
+		display: none;
+	}
+	
+	.caps{
+		text-transform: uppercase;
+	}
+
+	.wide{
+		width: 100%;
+		max-width: none;
+	}
+
+	.row.end [class="column"] + [class="column"]:last-child {
+		float: left;
+	}
+
+
+
+
+/*---   PAGES   ---*/
+
+	#pagewrap{
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		background-color: black;
+		position: absolute;
+		top: 0;
+	}
+
+	#pages{
+		width: 100%;
+		height: 100%;
+		height: -webkit-calc(100% - 50px);
+		height: -moz-calc(100% - 50px);
+		height: calc(100% - 50px);
+		position: absolute;
+		bottom: 0;
+    	overflow: hidden;
+	}
+
+	#page1{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: 0%;
+		background: gray;
+		background-image: url("../img/leeds_skyline3.jpg"); 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		z-index: 5;
+	}
+
+	#page2{
+		width: 100%;
+		height: 100%;
+    	position: absolute;
+    	bottom: -100%;
+		background: black;
+		z-index: 4;
+	}
+
+	#page3{
+		width: 100%;
+		height: 100%;
+    	position: absolute;
+    	bottom: -100%;
+		background: black;
+		z-index: 3;
+	}
+
+	#page4{
+		width: 100%;
+		height: 100%;
+    	position: absolute;
+    	bottom: -100%;
+		background: gray;
+		background-image: url("../img/profile-background.jpg"); 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		z-index: 2;
+	}
+
+	#page5{
+		width: 100%;
+		height: 100%;
+    	position: absolute;
+    	bottom: -100%;
+		background: white;
+		z-index: 1;
+	}
+
+
+/*---   NAVIGATION   ---*/
+	
+	.top-bar{
+		height: 50px;
+		background: rgb(235,235,235);
+		border-bottom: 8px solid white;
+	}
+
+	.top-bar.expanded .title-area{
+		background: rgb(235,235,235);
+
+	}
+
+	.top-bar .name h1 a{
+		color: black;
+	}
+
+	.top-bar-section li.active:not(.has-form) a:not(.button){
+		color: black;
+		background: white;
+	}
+
+	.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+		color: black;
+		background: white;
+	}
+
+	.top-bar-section li:not(.has-form) a:not(.button){
+		height: 42px;
+		color: black;
+		background: rgb(235,235,235);
+	}
+
+	.top-bar-section li:not(.has-form) a:not(.button):hover {
+		color: black;
+		background: rgb(245,245,245);
+	}
+
+	.top-bar-section .has-form{
+		background: rgb(235,235,235);
+	}
+
+	input[type="text"]{
+		color: rgb(68,68,68);
+		border-color: rgb(245,245,245);
+		border-radius: 0.9rem 0 0 0.9rem;
+	}
+
+	button.alert, .button.alert{
+		background: rgb(245,245,245);
+		color: black;
+		border-radius: 0 0.9rem 0.9rem 0;
+	}
+
+	button.alert, .button.alert:hover{
+		background: white;
+		color: black;
+	} 
+
+	.top-bar .toggle-topbar.menu-icon a{
+		color: black;
+	}
+
+	.top-bar .toggle-topbar.menu-icon a span{
+		color: black;
+	}
+
+
+/*---   CONTAINERS   ---*/
+
+	.green{
+		background-color: green;
+	}
+
+	.blue{
+		background-color: blue;
+	}
+
+	.red{
+		background-color: red;
+	}
+
+	.yellow{
+		background-color: yellow;
+	}
+
+	.white{
+		background-color: white;
+	}
+
+	.black{
+		background-color: black;
+	}
+
+	@media only screen {
+		.gr-wbl{
+			height: 100%;
+			width: 100%;
+		}
+
+		.gr-wbr{
+			height: 100%;
+			width: 100%;
+		}
+
+		.gr-wsl{
+			height: 100%;
+			width: 100%;
+		}
+
+		.gr-wsr{
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+
+	@media only screen and (min-width: 40.063em) {
+		.gr-wbl{
+			height: 100%;
+			width: 62%;
+			position: absolute;
+			left: 0;
+		}
+
+		.gr-wbr{
+			height: 100%;
+			width: 62%;
+			position: absolute;
+			right: 0;
+		}
+
+		.gr-wsl{
+			height: 100%;
+			width: 38%;
+			position: absolute;
+			left: 0;
+		}
+
+		.gr-wsr{
+			height: 100%;
+			width: 38%;
+			position: absolute;
+			right: 0;
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+
+		.gr-wbl{
+			height: 100%;
+			width: 62%;
+			position: absolute;
+			left: 0;
+		}
+
+		.gr-wbr{
+			height: 100%;
+			width: 62%;
+			position: absolute;
+			right: 0;
+		}
+
+		.gr-wsl{
+			height: 100%;
+			width: 38%;
+			position: absolute;
+			left: 0;
+		}
+
+		.gr-wsr{
+			height: 100%;
+			width: 38%;
+			position: absolute;
+			right: 0;
+		}
+	}
+
+
+	.gr-hbt{
+		width: 100%;
+		height: 62%;
+		position: absolute;
+		top: 0;
+	}
+
+	.gr-hbb{
+		width: 100%;
+		height: 62%;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.gr-hst{
+		width: 100%;
+		height: 38%;
+		position: absolute;
+		top: 0;
+	}
+
+	.gr-hsb{
+		width: 100%;
+		height: 38%;
+		position: absolute;
+		bottom: 0;
+	}
+
+
+/*---   HOME PAGE   ---*/
+
+	@media only screen and (min-width: 40.063em) {
+		.main-heading{
+			bottom: 80% !important;
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+		.main-heading{
+			bottom: 0% !important;
+		}
+	}
+
+
+	.login-form{
+		background: transparent !important;
+		border: none;
+	}
+
+	form.login-form{
+		width: 250px;
+		position: absolute;
+		bottom: 7%;
+		left: -webkit-calc(50% - 125px);
+		left: -moz-calc(50% - 125px);
+		left: calc(50% - 125px);
+	}
+
+	table.login-form{
+		margin: 10px auto;
+	}
+
+	input.login-field{
+		height: 30px;
+		width: 230px;
+		margin: 0;
+		border-radius: 15px;
+	}
+
+	input.login-submit{
+		height: 30px;
+		width: 80px;
+		background: rgb(245,245,245);
+		font-size: 16px;
+		color: black;
+		border: none;
+		border-radius: 15px;
+		margin: 0 75px;
+		padding: 0px;
+	}
+
+	input.login-submit:hover{
+		background-color: white;
+	}
+
+	p.signup{
+		text-align: center;
+		margin: 0;
+	}
+
+	#home-message{
+		width: 400px;
+		position: absolute;
+		bottom: 0;
+		left: -webkit-calc(50% - 200px);
+		left: -moz-calc(50% - 200px);
+		left: calc(50% - 200px);
+
+	}
+
+	.popup{
+		background-color: rgba(0,0,0,0.61);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	.popup-box{
+		background: rgb(20,20,20);
+		width: 400px;
+		height: 300px;
+		border-radius: 15px;
+		position: absolute;
+		bottom: 0;
+		z-index: 50;
+		left: -webkit-calc(50% - 200px);
+		left: -moz-calc(50% - 200px);
+		left: calc(50% - 200px);
+		top: -webkit-calc(50% - 150px);
+		top: -moz-calc(50% - 150px);
+		top: calc(50% - 150px);
+	}
+
+	.signup-heading{
+		color: white;
+		font-size: 1em;
+		margin-top: 5px;
+		margin-bottom: 2px;
+	}
+
+/*---   DISCOVER PAGE   ---*/
+	
+	.column,
+  	.columns {
+  		padding-left: 0;
+  		padding-right: 0;
+  	}
+
+  	.section-fade{
+  		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background: rgba(0,0,0,0);
+		-webkit-transition: background 0.5s ease-in-out;
+        -moz-transition: background 0.5s ease-in-out;
+        -ms-transition: background 0.5s ease-in-out;
+        -o-transition: background 0.5s ease-in-out;
+        transition: background 0.5s ease-in-out;
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		.section-fade{
+			background: rgba(0,0,0,0);
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+		.section-fade{
+			background: rgba(0,0,0,0.61);
+		}
+	}
+
+	#disc-info-box:hover > #disc-info-fade {
+		background: rgba(0,0,0,0.0);
+	}
+
+	#disc-slider:hover > #disc-slider-fade {
+		background: rgba(0,0,0,0.0);
+	}
+
+	#disc-info-box{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: black;
+		background-image: url("../img/leeds_arcade.jpg");
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	h1.heading{
+		color: white;
+	}
+
+	@media only screen {
+		h1.heading{
+			font-size: 1.5em;
+		}
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		h1.heading{
+			font-size: 5em;
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+		h1.heading{
+			font-size: 8em;
+		}
+	}
+
+	.disc-titlebox{
+		background: rgba(20,20,20,0.9);
+		position: absolute;
+		width: 80%;
+		padding: 0 50px;
+		margin: 20px 0;
+		z-index: 3;
+	}
+
+	.disc-textbox{
+		background: rgba(20,20,20,0.9);
+		position: absolute;
+		width: 80%;
+		padding: 0 50px;
+		margin: 20px 0;
+		z-index: 3;
+	}
+
+	.topleft{
+		top: 0%;
+		left: 0%;
+	}
+	.topright{
+		top: 0%;
+		right: 0%;
+		text-align: right;
+	}
+	.bottomleft{
+		bottom: 0%;
+		left: 0%;
+	}
+	.bottomright{
+		bottom: 0%;
+		right: 0%;
+		text-align: right;
+	}
+
+	h3.subheading{
+		color: white;
+		font-size: 2em;
+		text-transform: uppercase;
+		margin-top: 0.5em;
+	}
+
+	p.text{
+		color: white;
+		font-size: 1em;
+		
+	}
+
+	@media only screen {
+		#shops-info{
+			height: 62%;
+		}
+
+		#shops-list{
+			height: 38%;
+		}
+
+		.hide{
+			opacity: 0;
+		}
+
+		.disc-textbox{
+			width: 100%;
+		}
+
+		h3.subheading{
+			font-size: 1em;
+		}
+
+		p.text{
+			font-size: 0.75em;
+		}
+
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		#shops-info{
+			height: 100%;
+		}
+
+		#shops-list{
+			height: 100%;
+		}
+
+		.hide{
+			opacity: 100%;
+		}
+
+		.disc-textbox{
+			width: 80%;
+		}
+
+		h3.subheading{
+			font-size: 2em;
+		}
+
+		p.text{
+			font-size: 1em;
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+		#shops-info{
+			height: 100%;
+		}
+
+		#shops-list{
+			height: 100%;
+		}
+
+		.hide{
+			opacity: 100%;
+		}
+
+		.disc-textbox{
+			width: 80%;
+		}
+	}
+
+	h1.subheading{
+		color: white;
+		font-size: 5em;
+		text-transform: uppercase;
+	}
+
+
+	@media only screen {
+		h1.subheading {
+			font-size: 1.5em;
+		}
+	}
+
+
+	@media only screen and (min-width: 40.063em) {
+		h1.subheading {
+			font-size: 3em;
+		}
+	}
+
+
+	@media only screen and (min-width: 64.063em) {
+		h1.subheading {
+			font-size: 5em;
+		}
+	}
+
+
+	#disc-slider{
+		width: 100%;
+		height: 100%;
+		background: rgb(20,20,20);
+	}
+
+	#disc-slider-img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.slider-slide{
+		width: 100%;
+	}
+
+	.slide{
+		height: 100%;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.hidden{
+		visibility: hidden;
+	}
+
+	#disc-feat{
+		background: rgb(20,20,20);
+		padding: 1em 2em;
+	}
+
+
+/*---   SHOPS PAGE   ---*/
+
+	#shops-info{
+	}
+
+	
+
+	.info-item-1{
+		background-image: url("../img/attractions/01.jpg");
+	}
+
+	.info-item-2{
+		background-image: url("../img/attractions/02.jpg");
+	}
+
+	.info-item-3{
+		background-image: url("../img/attractions/03.jpg");
+	}
+
+	.info-item-4{
+		background-image: url("../img/attractions/04.jpg");
+	}
+
+	.info-item-5{
+		background-image: url("../img/attractions/05.jpg");
+	}
+
+	.info-item-6{
+		background-image: url("../img/attractions/06.jpg");
+	}
+
+	.info-item-7{
+		background-image: url("../img/attractions/07.jpg");
+	}
+
+	.info-item-8{
+		background-image: url("../img/attractions/08.jpg");
+	}
+
+	.info-item-9{
+		background-image: url("../img/attractions/09.jpg");
+	}
+
+	.info-item-10{
+		background-image: url("../img/attractions/10.jpg");
+	}
+
+	.info-item-11{
+		background-image: url("../img/attractions/11.jpg");
+	}
+
+	.info-item-12{
+		background-image: url("../img/attractions/12.jpg");
+	}
+
+	.info-item-13{
+		background-image: url("../img/attractions/13.jpg");
+	}
+
+	.info-item-14{
+		background-image: url("../img/attractions/14.jpg");
+	}
+
+	.info-item-15{
+		background-image: url("../img/attractions/15.jpg");
+	}
+
+	.info-item-16{
+		background-image: url("../img/attractions/16.jpg");
+	}
+
+	.info-item-17{
+		background-image: url("../img/attractions/17.jpg");
+	}
+
+	.info-item-18{
+		background-image: url("../img/attractions/18.jpg");
+	}
+
+	.info-item-19{
+		background-image: url("../img/attractions/19.jpg");
+	}
+
+	.info-item-20{
+		background-image: url("../img/attractions/20.jpg");
+	}
+
+	.info-item-21{
+		background-image: url("../img/attractions/21.jpg");
+	}
+
+	.info-item-22{
+		background-image: url("../img/attractions/22.jpg");
+	}
+
+	.info-item-23{
+		background-image: url("../img/attractions/23.jpg");
+	}
+
+	.info-item-24{
+		background-image: url("../img/attractions/24.jpg");
+	}
+
+	.info-item-25{
+		background-image: url("../img/attractions/25.jpg");
+	}
+
+	.info-item-26{
+		background-image: url("../img/attractions/26.jpg");
+	}
+
+	.info-item-27{
+		background-image: url("../img/attractions/27.jpg");
+	}
+
+	.info-item-28{
+		background-image: url("../img/attractions/28.jpg");
+	}
+
+	.info-item-29{
+		background-image: url("../img/attractions/29.jpg");
+	}
+
+	.info-item-30{
+		background-image: url("../img/attractions/30.jpg");
+	}
+
+	.info-item-31{
+		background-image: url("../img/attractions/31.jpg");
+	}
+
+	.info-item-32{
+		background-image: url("../img/attractions/32.jpg");
+	}
+
+	.info-item-33{
+		background-image: url("../img/attractions/33.jpg");
+	}
+
+	.info-item-34{
+		background-image: url("../img/attractions/34.jpg");
+	}
+
+	.info-item-35{
+		background-image: url("../img/attractions/35.jpg");
+	}
+
+	.info-item-36{
+		background-image: url("../img/attractions/36.jpg");
+	}
+
+	.info-item-37{
+		background-image: url("../img/attractions/37.jpg");
+	}
+
+	.info-item-38{
+		background-image: url("../img/attractions/38.jpg");
+	}
+
+	.info-item-39{
+		background-image: url("../img/attractions/39.jpg");
+	}
+
+	.info-item-40{
+		background-image: url("../img/attractions/40.jpg");
+	}
+
+	.info-item-41{
+		background-image: url("../img/attractions/41.jpg");
+	}
+
+	.info-item-42{
+		background-image: url("../img/attractions/42.jpg");
+	}
+
+	.info-item-43{
+		background-image: url("../img/attractions/43.jpg");
+	}
+
+	.info-item-44{
+		background-image: url("../img/attractions/44.jpg");
+	}
+
+	.info-item-45{
+		background-image: url("../img/attractions/45.jpg");
+	}
+
+	.info-item-46{
+		background-image: url("../img/attractions/46.jpg");
+	}
+
+	.info-item-47{
+		background-image: url("../img/attractions/47.jpg");
+	}
+
+	.info-item-48{
+		background-image: url("../img/attractions/48.jpg");
+	}
+
+	.info-item-49{
+		background-image: url("../img/attractions/49.jpg");
+	}
+
+	.info-item-50{
+		background-image: url("../img/attractions/50.jpg");
+	}
+
+	.info-item-51{
+		background-image: url("../img/attractions/51.jpg");
+	}
+
+	.info-item-52{
+		background-image: url("../img/attractions/52.jpg");
+	}
+
+	.info-item-53{
+		background-image: url("../img/attractions/53.jpg");
+	}
+
+	.info-item-54{
+		background-image: url("../img/attractions/54.jpg");
+	}
+
+	.info-item-55{
+		background-image: url("../img/attractions/55.jpg");
+	}
+
+	.info-item-56{
+		background-image: url("../img/attractions/56.jpg");
+	}
+
+	.info-item-57{
+		background-image: url("../img/attractions/57.jpg");
+	}
+
+	.info-item-58{
+		background-image: url("../img/attractions/58.jpg");
+	}
+
+	.info-item-59{
+		background-image: url("../img/attractions/59.jpg");
+	}
+
+	.info-item-60{
+		background-image: url("../img/attractions/60.jpg");
+	}
+
+	.info-item-61{
+		background-image: url("../img/attractions/61.jpg");
+	}
+
+	.info-item-62{
+		background-image: url("../img/attractions/62.jpg");
+	}
+
+	
+
+	.info-item{
+		width: 100%;
+		height: 100%;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.list-item{
+		width: 100%;
+		height: 100%;
+		background: rgb(20,20,20);
+		border-bottom: 1px solid black;
+	}
+
+	.selected{
+		width: 100%;
+		height: 100%;
+		background: rgb(40,40,40);
+		border-bottom: 1px solid black;
+	}
+
+	ul.list-nav {
+		list-style-type: none;
+		width: 100%;
+		margin: 0;
+	}
+
+
+	h1.list-heading {
+			color: white;
+			padding: 0.5em 1em;
+			margin: 0;
+		}
+
+	@media only screen {
+		h1.list-heading {
+			font-size: 1em;
+		}
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		h1.list-heading {
+			font-size: 1.5em;
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+		h1.list-heading {
+			font-size: 2em;
+		}
+	}
+
+
+/*---   PROFILE PAGE   ---*/
+
+	#profile-nologin{
+		position: absolute;
+		bottom: 50%;
+	}
+
+	#favourites-list{
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.box{
+		padding: 0;
+		height: 400px;
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		.box{
+		padding: 10px;
+		height: 270px;
+		}
+	}
+
+	.fav-margin{
+		width: -webkit-calc(100% - 10px);
+		width: -moz-calc(100% - 10px);
+		width: calc(100% - 10px);
+		height: -webkit-calc(100% - 10px);
+		height: -moz-calc(100% - 10px);
+		height: calc(100% - 10px);
+		padding: 20px;
+		background-color: rgba(20,20,20,0.8);
+	}	
+
+	.fav-img{
+		width: -webkit-calc(100% - 10px);
+		width: -moz-calc(100% - 10px);
+		width: calc(100% - 10px);
+		height: 200px;
+		margin: auto;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		.fav-img{
+		width: -webkit-calc(50% - 10px);
+		width: -moz-calc(50% - 10px);
+		width: calc(50% - 10px);
+		height: 200px;
+		margin: auto;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		}
+	}
+
+	.fav-info{
+		padding: 10px;
+	}
+
+	.fav_btn{
+		width: 64px;
+		height: 64px;
+		border-radius: 12px;
+		margin-left: calc(100% - 68px);
+		margin-bottom: 10px;
+		font-size: 2.5em;
+		text-align: center;
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	.fav-off{
+		background-color: rgb(10,10,10);
+		color: rgb(245,245,245);
+	}
+
+	.fav-on{
+		background-color: rgb(245,245,245);
+		color: rgb(10,10,10);
+	}
+
+/*---   MAPS PAGE   ---*/
+
+	#googleMap{
+		height: 62%;
+		width: 100%;
+	}
+
+	@media only screen and (min-width: 40.063em) {
+		#googleMap{
+			height: 100%;
+		}
+	}
+
+	@media only screen and (min-width: 64.063em) {
+		#googleMap{
+			height: 100%;
+		}
+	}
+
+	
+	@media only screen {
+		#page2{
+			overflow-x: hidden;
+			height: 100%;
+		}
+	}
+
+	.disc-textbox{
+		max-height: 60%;
+	}
+
+	.scroll{
+		overflow: auto;
+	}
+
+	.scroll::-webkit-scrollbar-track
+	{
+		width: 10px;
+		margin: 10px 0;
+		border-radius: 10px;
+		background-color: rgb(20,20,20);
+	}
+
+	.scroll::-webkit-scrollbar
+	{
+		width: 10px;
+		background-color: rgb(20,20,20);
+	}
+
+	.scroll::-webkit-scrollbar-thumb
+	{
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+		background-color: rgb(245,245,245);
+	}
